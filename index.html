@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Beautiful Girlfriend ❤️</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff6b8b;
+            --secondary-color: #ff9eaa;
+            --accent-color: #ff4d6d;
+            --text-color: #333;
+            --light-bg: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ff758c, #ff7eb3, #a18cd1, #fbc2eb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .card {
+            background: var(--light-bg);
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .birthday-title {
+            font-family: 'Great Vibes', cursive;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 576px) {
+            .birthday-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        .title-underline {
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            margin: 0.5rem auto 2rem;
+            border: none;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-img-border {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 3px dashed var(--primary-color);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 576px) {
+            .profile-img-container {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        .birthday-img:hover {
+            transform: scale(1.05);
+        }
+
+        .wish-box {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(255, 235, 238, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wish-box::before {
+            content: '❝';
+            position: absolute;
+            font-size: 5rem;
+            color: rgba(255, 107, 139, 0.2);
+            top: -10px;
+            left: 10px;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .wish-text {
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .wish-text p {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .wish-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .wish-text p::before {
+            content: '❤️';
+            position: absolute;
+            color: #ff6b6b;
+            left: 0;
+            top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            opacity: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloon:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background: #ccc;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #f00;
+            opacity: 0;
+            animation: confetti 5s linear infinite;
+        }
+
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .btn-custom {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 0.8rem 2.2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin: 1.5rem 0;
+        }
+
+        .btn-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            border-radius: 50px;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 139, 0.5);
+            color: white;
+        }
+
+        .btn-custom:hover::before {
+            opacity: 1;
+        }
+
+        .btn-custom:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(255, 107, 139, 0.6);
+        }
+        
+        .btn-pink {
+            background: linear-gradient(45deg, #ff6b8b, #ff9eaa);
+            color: white !important;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-pink:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 139, 0.5);
+            color: white;
+        }
+        
+        .btn-pink:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(255, 107, 139, 0.6);
+        }
+
+        .btn-custom i {
+            margin: 0 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-custom:hover i {
+            transform: scale(1.2);
+        }
+
+        .signature {
+            margin-top: 1.5rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .signature::after,
+        .signature::before {
+            content: '❤️';
+            position: relative;
+            display: inline-block;
+            animation: float 2s ease-in-out infinite;
+            font-size: 1.2rem;
+            margin: 0 5px;
+        }
+
+        .signature::before {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 20px;
+            color: var(--primary-color);
+            opacity: 0;
+            animation: float-up 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .floating-element.heart {
+            color: #ff6b6b;
+        }
+
+        .floating-element.sparkle {
+            color: #ffd700;
+            font-size: 16px;
+        }
+
+        .floating-element.flower {
+            color: #ff9ff3;
+            font-size: 18px;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Gift Box Styles */
+        .gift-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .gift-box {
+            cursor: pointer;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .box-lid {
+            width: 100%;
+            height: 40%;
+            background: #ff4d6d;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            top: 0;
+            transform-origin: bottom;
+            transition: transform 0.5s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .box-body {
+            width: 100%;
+            height: 60%;
+            background: #ff758c;
+            border-radius: 0 0 10px 10px;
+            position: absolute;
+            bottom: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .box-bow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: #ff9eaa;
+            border-radius: 50%;
+        }
+
+        .box-bow::before,
+        .box-bow::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #ff9eaa;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .box-ribbon {
+            width: 100%;
+            height: 20px;
+            background: #ff9eaa;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .gift-message {
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease;
+            max-width: 80%;
+            margin-top: 2rem;
+        }
+
+        .gift-message.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .gift-box.shake {
+            animation: shake 0.5s ease-in-out infinite alternate;
+        }
+
+        .gift-box.float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(-2deg); }
+            100% { transform: rotate(2deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f00;
+            opacity: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1.5rem;
+            }
+            
+            .birthday-title {
+                font-size: 2.5rem;
+            }
+            
+            .wish-box {
+                padding: 1.5rem;
+            }
+            
+            .wish-text {
+                font-size: 1rem;
+            }
+            
+            .btn-custom {
+                padding: 0.7rem 1.8rem;
+                font-size: 1rem;
+            }
+            
+            .signature {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            .birthday-title {
+                font-size: 2.2rem;
+            }
+            
+            .wish-box {
+                padding: 1.25rem 1rem;
+                margin: 1.5rem 0;
+            }
+            
+            .wish-text {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            .btn-custom {
+                width: 100%;
+                margin: 1rem 0;
+            }
+            
+            .signature {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Gift Box Container -->
+    <div class="gift-container" id="giftContainer">
+        <div class="gift-box" id="giftBox">
+            <div class="box">
+                <div class="box-lid">
+                    <div class="box-bow"></div>
+                </div>
+                <div class="box-body">
+                    <div class="box-ribbon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gift-message" id="giftMessage">
+            <h2>Happy Birthday My Love! 🎉</h2>
+            <p>You are the most beautiful gift in my life. Wishing you a day filled with love and happiness!</p>
+            <button class="btn btn-pink mt-3" id="continueBtn">Continue to Celebration 🎂</button>
+        </div>
+    </div>
+    
+    <div class="main-container" id="mainContent" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="card animate__animated animate__fadeIn" data-aos="zoom-in">
+                        <div class="card-body text-center">
+                            <h1 class="birthday-title animate__animated animate__bounceIn">Happy Birthday My Love! 🎂💝</h1>
+                            <hr class="title-underline">
+                            
+                            <div class="profile-img-container" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="profile-img-border"></div>
+                                <img src="Pink.jpg" 
+                                     alt="My Beautiful Girlfriend" 
+                                     class="profile-img">
+                            </div>
+                            
+                            <div class="wish-box animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                                <div class="wish-text">
+                                    <p>To the most amazing woman in my life,</p>
+                                    <p>On your special day, I want you to know how incredibly lucky I am to have you. Your smile brightens my darkest days, and your love fills my life with joy beyond measure.</p>
+                                    <p>May this birthday be as beautiful and wonderful as you are. You deserve all the happiness in the world, today and always.</p>
+                                    <p>Forever yours,</p>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-custom" id="surpriseBtn" data-aos="fade-up" data-aos-delay="600">
+                                <i class="fas fa-gift"></i> Click for a Special Surprise! <i class="fas fa-heart"></i>
+                            </button>
+                            
+                            <div class="signature" data-aos="fade-up" data-aos-delay="800">
+                                With all my love
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <div class="music-player">
+        <audio id="bgMusic" loop>
+            <!-- Add your music file here -->
+            <source src="happbirthday.dat" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="musicToggle" class="btn btn-sm btn-music">
+            <i class="fas fa-music"></i> <span>Music: ON</span>
+        </button>
+        <div class="volume-control">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- Custom Slider CSS -->
+    <style>
+        /* Custom Slider Styles */
+        .memory-slider {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 400px;
+        }
+        
+        .memory-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .memory-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .memory-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Dots Navigation */
+        .slider-dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .slider-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .slider-dot.active {
+            background-color: #ff6b8b;
+        }
+    </style>
+    
+    <!-- Collage Section with Slick Slider -->
+    <div class="collage-container" id="collageContainer" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="text-white mb-4">Our Beautiful Memories Together</h3>
+                </div>
+                
+                <div class="col-12">
+                    <div class="memory-slider">
+                        <div class="memory-slide">
+                            <img src="black.jpg" alt="Memory 1">
+                        </div>
+                        <div class="memory-slide">
+                            <img src="together.jpg" alt="Memory 2">
+                        </div>
+                        <div class="memory-slide">
+                            <img src="red.jpg" alt="Memory 3">
+                        </div>
+                        <div class="memory-slide">
+                            <img src="Pink.jpg" alt="Memory 4">
+                        </div>
+                        <div class="memory-slide">
+                            <img src="blue.jpg" alt="Memory 4">
+                        </div>
+                        <div class="memory-slide">
+                            <img src="good.jpg" alt="Memory 4">
+                        </div>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="slider-dot active" data-slide="0"></span>
+                        <span class="slider-dot" data-slide="1"></span>
+                        <span class="slider-dot" data-slide="2"></span>
+                        <span class="slider-dot" data-slide="3"></span>
+                        <span class="slider-dot" data-slide="4"></span>
+                        <span class="slider-dot" data-slide="5"></span>
+                    </div>
+                </div>
+                
+                <div class="col-12 text-center mt-4">
+                    <button id="closeCollage" class="btn btn-outline-light">Close Memories</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .collage-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        /* Slick Slider Custom Styles */
+        .memory-slider {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .memory-slider .slick-slide {
+            padding: 0 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .memory-slider .slick-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .memory-slider .slick-slide.slick-center img {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .slick-prev:before, 
+        .slick-next:before {
+            color: #ff6b8b;
+            font-size: 30px;
+        }
+        
+        .slick-dots li button:before {
+            color: #ff6b8b;
+            opacity: 0.5;
+        }
+        
+        .slick-dots li.slick-active button:before {
+            color: #ff6b8b;
+            opacity: 1;
+        }
+        
+        .collage-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .collage-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        #closeCollage {
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        #closeCollage:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Fix text color issues */
+        .wish-text, .wish-text p {
+            color: #333 !important;
+        }
+        
+        /* Music Player Styles */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .btn-music {
+            background: linear-gradient(45deg, #ff6b8b, #ff9eaa);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-music:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 107, 139, 0.4);
+        }
+        
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .volume-control:hover {
+            opacity: 1;
+        }
+        
+        #volumeControl {
+            width: 70px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 576px) {
+            .music-player {
+                bottom: 10px;
+                right: 10px;
+                padding: 6px 12px;
+            }
+            
+            .btn-music {
+                padding: 4px 10px;
+                font-size: 0.8rem;
+            }
+            
+            #volumeControl {
+                width: 50px;
+            }
+        }
+    </style>
+
+    
+    <script>
+        // Initialize Simple Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.memory-slider');
+            const slides = document.querySelectorAll('.memory-slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            let slideInterval;
+            const slideCount = slides.length;
+            
+            // Set initial active slide and dot
+            function initSlider() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    if (dots[index]) dots[index].classList.remove('active');
+                });
+                slides[0].classList.add('active');
+                if (dots[0]) dots[0].classList.add('active');
+            }
+            
+            // Initialize slider
+            initSlider();
+            
+            // Function to go to a specific slide
+            function goToSlide(index) {
+                if (index < 0) index = slideCount - 1;
+                if (index >= slideCount) index = 0;
+                
+                slides[currentSlide].classList.remove('active');
+                if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+                
+                currentSlide = index;
+                slides[currentSlide].classList.add('active');
+                if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+            }
+            
+            // Show next slide
+            function showNextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+            
+            // Show previous slide
+            function showPrevSlide() {
+                goToSlide(currentSlide - 1);
+            }
+            
+            // Start auto-rotation
+            function startAutoRotate() {
+                stopAutoRotate();
+                slideInterval = setInterval(showNextSlide, 3000);
+            }
+            
+            // Stop auto-rotation
+            function stopAutoRotate() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                    slideInterval = null;
+                }
+            }
+            
+            // Pause on hover
+            slider.addEventListener('mouseenter', stopAutoRotate);
+            slider.addEventListener('mouseleave', startAutoRotate);
+            
+            // Touch support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            slider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAutoRotate();
+            }, { passive: true });
+            
+            slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAutoRotate();
+            }, { passive: true });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    showNextSlide();
+                } else if (touchEndX > touchStartX + swipeThreshold) {
+                    showPrevSlide();
+                }
+            }
+            
+            // Add click handlers for dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoRotate();
+                    goToSlide(index);
+                    startAutoRotate();
+                });
+            });
+            
+            // Start the auto-rotation
+            startAutoRotate();
+            
+            // Initialize dots and slides
+            initSlider();
+            
+            // Music Player Functionality
+            const music = document.getElementById('bgMusic');
+            const musicToggle = document.getElementById('musicToggle');
+            const volumeControl = document.getElementById('volumeControl');
+            
+            // Try to autoplay music (note: many browsers block autoplay without user interaction)
+            document.addEventListener('click', function initAudio() {
+                const playPromise = music.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay prevented:", error);
+                        musicToggle.innerHTML = '<i class="fas fa-music"></i> <span>Click to Play</span>';
+                    });
+                }
+                
+                // Remove this event listener after first interaction
+                document.removeEventListener('click', initAudio);
+            }, { once: true });
+            
+            // Toggle play/pause
+            musicToggle.addEventListener('click', function() {
+                if (music.paused) {
+                    music.play();
+                    this.innerHTML = '<i class="fas fa-music"></i> <span>Music: ON</span>';
+                } else {
+                    music.pause();
+                    this.innerHTML = '<i class="fas fa-music"></i> <span>Music: OFF</span>';
+                }
+            });
+            
+            // Volume control
+            volumeControl.addEventListener('input', function() {
+                music.volume = this.value;
+            });
+            
+            // Set initial volume
+            music.volume = volumeControl.value;
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Gift Box Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftBox = document.getElementById('giftBox');
+            const giftMessage = document.getElementById('giftMessage');
+            const mainContent = document.getElementById('mainContent');
+            const continueBtn = document.getElementById('continueBtn');
+            let clicked = false;
+
+            // Add initial animations
+            giftBox.classList.add('shake', 'float');
+
+            // Click handler for gift box
+            giftBox.addEventListener('click', function() {
+                if (clicked) return;
+                clicked = true;
+                
+                // Remove shake and float animations
+                giftBox.classList.remove('shake', 'float');
+                
+                // Create confetti explosion
+                createGiftConfetti();
+                
+                // Open the gift box
+                setTimeout(() => {
+                    document.querySelector('.box-lid').style.transform = 'rotateX(180deg) translateY(-40%)';
+                    
+                    // Show message after a delay
+                    setTimeout(() => {
+                        giftMessage.classList.add('show');
+                    }, 500);
+                }, 300);
+            });
+
+            // Continue button handler
+            continueBtn.addEventListener('click', function() {
+                giftBox.style.opacity = '0';
+                giftMessage.style.opacity = '0';
+                
+                setTimeout(() => {
+                    document.querySelector('.gift-container').style.display = 'none';
+                    mainContent.style.display = 'block';
+                    
+                    // Start the rest of the animations
+                    createInitialBurst();
+                    setInterval(createFloatingElement, 500);
+                }, 500);
+            });
+
+            // Create confetti explosion for gift
+            function createGiftConfetti() {
+                const colors = ['#ff6b6b', '#ff9eaa', '#ffd3b6', '#dcedc1', '#a8e6cf', '#ff8b94'];
+                const container = document.querySelector('.gift-container');
+                
+                for (let i = 0; i < 100; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = Math.random() * 100 + 'vh';
+                    confetti.style.width = Math.random() * 15 + 5 + 'px';
+                    confetti.style.height = Math.random() * 15 + 5 + 'px';
+                    confetti.style.opacity = '1';
+                    confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+                    container.appendChild(confetti);
+                    
+                    // Animate confetti
+                    gsap.to(confetti, {
+                        y: Math.random() * 500 - 300,
+                        x: Math.random() * 400 - 200,
+                        rotation: Math.random() * 360,
+                        opacity: 0,
+                        duration: 2 + Math.random() * 3,
+                        ease: 'power1.out',
+                        onComplete: () => confetti.remove()
+                    });
+                }
+            }
+        });
+
+        // Create floating elements (hearts, sparkles, etc.)
+        function createFloatingElement() {
+            const container = document.getElementById('floatingElements');
+            const element = document.createElement('div');
+            
+            // Different types of floating elements
+            const elementTypes = [
+                { type: 'heart', content: '❤️', class: 'heart' },
+                { type: 'sparkle', content: '✨', class: 'sparkle' },
+                { type: 'flower', content: '🌸', class: 'flower' },
+                { type: 'star', content: '⭐', class: 'sparkle' },
+                { type: 'diamond', content: '💎', class: 'sparkle' }
+            ];
+            
+            const randomType = elementTypes[Math.floor(Math.random() * elementTypes.length)];
+            
+            element.className = `floating-element ${randomType.class}`;
+            element.innerHTML = randomType.content;
+            element.style.left = Math.random() * 100 + 'vw';
+            element.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            element.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            element.style.animationDelay = Math.random() * 2 + 's';
+            
+            // Random rotation for more natural look
+            element.style.transform = `rotate(${Math.random() * 360}deg)`;
+            
+            container.appendChild(element);
+            
+            // Remove element after animation completes
+            setTimeout(() => {
+                if (element.parentNode === container) {
+                    container.removeChild(element);
+                }
+            }, 6000);
+        }
+
+        // Create floating elements periodically
+        setInterval(createFloatingElement, 500);
+        
+        // Create initial burst of elements
+        function createInitialBurst() {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createFloatingElement, i * 100);
+            }
+        }
+
+        // Create confetti effect
+        function createConfetti() {
+            const container = document.getElementById('floatingElements');
+            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffcc5c', '#ff6f69', '#a18cd1'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'floating-element';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = -10 + 'px';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 5 + 3 + 'px';
+                confetti.style.borderRadius = '50%';
+                confetti.style.animation = `float-up ${Math.random() * 3 + 2}s ease-in-out forwards`;
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    if (confetti.parentNode === container) {
+                        container.removeChild(confetti);
+                    }
+                }, 5000);
+            }
+        }
+
+        // Show collage function
+        function showCollage() {
+            document.getElementById('collageContainer').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            createConfetti();
+        }
+        
+        // Close collage function
+        document.getElementById('closeCollage').addEventListener('click', function() {
+            document.getElementById('collageContainer').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Surprise button click handler
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            const btn = this;
+            showCollage();
+            
+            // Disable button during animation
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Loading...';
+            
+            // Create burst of elements
+            for (let i = 0; i < 50; i++) {
+                setTimeout(createFloatingElement, i * 50);
+            }
+            
+            // Add confetti
+            createConfetti();
+            
+            // Add pulse animation to card
+            const card = document.querySelector('.card');
+            card.classList.add('animate__animated', 'animate__pulse');
+            
+            // Play birthday song (with user interaction)
+            const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-happy-birthday-to-you-4440.mp3');
+            audio.volume = 0.3;
+            
+            // Only play audio after user interaction
+            const playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log('Audio play failed:', error);
+                    // If autoplay was prevented, show a message
+                    if (error.name === 'NotAllowedError') {
+                        console.log('Autoplay prevented. Please interact with the page first.');
+                    }
+                });
+            }
+            
+            // Reset button after animation
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-heart"></i> I Love You! <i class="fas fa-heart"></i>';
+                btn.classList.add('animate__animated', 'animate__heartBeat');
+                
+                setTimeout(() => {
+                    btn.classList.remove('animate__heartBeat');
+                    btn.innerHTML = '<i class="fas fa-gift"></i> Click for a Special Surprise! <i class="fas fa-heart"></i>';
+                    btn.disabled = false;
+                    card.classList.remove('animate__pulse');
+                }, 2000);
+            }, 3000);
+        });
+
+        // Initial animations and effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial animations
+            setTimeout(() => {
+                const card = document.querySelector('.card');
+                card.classList.add('animate__animated', 'animate__heartBeat');
+                
+                setTimeout(() => {
+                    card.classList.remove('animate__heartBeat');
+                }, 1000);
+            }, 1000);
+            
+            // Create initial floating elements
+            createInitialBurst();
+            
+            // Add subtle background animation
+            document.body.style.animation = 'gradientBG 15s ease infinite';
+            
+            // Add hover effect to profile image
+            const profileImg = document.querySelector('.profile-img');
+            if (profileImg) {
+                profileImg.addEventListener('mouseenter', () => {
+                    profileImg.style.transform = 'scale(1.05)';
+                });
+                
+                profileImg.addEventListener('mouseleave', () => {
+                    profileImg.style.transform = 'scale(1)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
